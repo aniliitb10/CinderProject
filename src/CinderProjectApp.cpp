@@ -2,8 +2,6 @@
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 
-#include <thread>
-
 using namespace ci;
 using namespace ci::app;
 
@@ -48,12 +46,10 @@ void CinderProjectApp::update()
 {
   conditionalReset();
   _radius += 1;
-  //_lineWidth += 0.1;
 }
 
 void CinderProjectApp::draw()
 {
-  //gl::lineWidth(_lineWidth);
   gl::drawStrokedCircle(getWindowCenter(), _radius);
 }
 
